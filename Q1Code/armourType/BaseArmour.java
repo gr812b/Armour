@@ -10,9 +10,5 @@ public abstract class BaseArmour implements Armour {
     public String getRarityDescription() {
         return rarity.getRarityDescription();
     }
-
-    public int getRarity() {
-        return rarity.getRarity();
-    }
     
 }
