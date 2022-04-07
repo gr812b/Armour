@@ -10,6 +10,6 @@ public class Amulet extends BaseArmour {
     
     @Override
     public String getDescription() {
-        return "---Amulet---" + "\n" + "Rarity: " + getRarityDescription();
+        return "---Amulet---" + "\n" + "Rarity: " + rarity.getRarityDescription();
     }
 }

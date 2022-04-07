@@ -6,9 +6,5 @@ import Q1Code.rarity.Rarity;
 public abstract class BaseArmour implements Armour {
     
     protected Rarity rarity;
-
-    public String getRarityDescription() {
-        return rarity.getRarityDescription();
-    }
     
 }
