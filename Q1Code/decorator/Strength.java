@@ -10,7 +10,7 @@ public class Strength extends ArmourDecorator {
 
     @Override
     public String getDescription() {
-        return armour.getDescription() + "\nmodifier of Strength";
+        return armour.getDescription() + "\nStrength + 5";
     }
     
 }

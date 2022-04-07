@@ -10,7 +10,7 @@ public class Helm extends BaseArmour {
 
     @Override
     public String getDescription() {
-        return "---Helm---" + "\n" + "Rarity: " + rarity.getRarityDescription();
+        return rarity.getRarityDescription() + " Helm:";
     }
     
 }

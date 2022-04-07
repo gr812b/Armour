@@ -10,7 +10,7 @@ public class Dexterity extends ArmourDecorator {
 
     @Override
     public String getDescription() {
-        return armour.getDescription() + "\nmodifier of Dexterity";
+        return armour.getDescription() + "\nDexterity + 5";
     }
     
 }

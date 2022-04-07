@@ -15,7 +15,7 @@ public class ArmoutTest {
         //Print out armour piece
         System.out.println(currentArmour.getDescription());
 
-
+        
     }
     
 }

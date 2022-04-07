@@ -10,7 +10,7 @@ public class Mana extends ArmourDecorator{
 
     @Override
     public String getDescription() {
-        return armour.getDescription() + "\nmodifier of Mana";
+        return armour.getDescription() + "\nMana + 5";
     }
     
 }
