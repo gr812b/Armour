@@ -6,7 +6,7 @@ public class Legendary implements Rarity {
     }
     
     @Override
-    public String getRarityDescription() {
+    public String getDescription() {
         return "Legendary";
     }
 }

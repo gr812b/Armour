@@ -8,7 +8,7 @@ public class Rare implements Rarity {
     }
 
     @Override
-    public String getRarityDescription() {
+    public String getDescription() {
         return "Rare";
     }
     

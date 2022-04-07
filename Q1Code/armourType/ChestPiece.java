@@ -10,7 +10,7 @@ public class ChestPiece extends BaseArmour {
 
     @Override
     public String getDescription() {
-        return rarity.getRarityDescription() + " Chest Piece:";
+        return rarity.getDescription() + " Chest Piece:";
     }
     
 }

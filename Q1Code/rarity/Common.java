@@ -6,7 +6,7 @@ public class Common implements Rarity {
     }
 
     @Override
-    public String getRarityDescription() {
+    public String getDescription() {
         return "Common";
     }
 }

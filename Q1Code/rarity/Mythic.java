@@ -6,7 +6,7 @@ public class Mythic implements Rarity {
     }
 
     @Override
-    public String getRarityDescription() {
+    public String getDescription() {
         return "Mythic";
     }
 }
