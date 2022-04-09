@@ -1,4 +1,4 @@
-package observer;
+package Q2Code.observer;
 
 public interface Subject {
     

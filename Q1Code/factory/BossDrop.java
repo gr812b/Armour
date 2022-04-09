@@ -5,9 +5,9 @@ import Q1Code.armourType.*;
 import Q1Code.decorator.*;
 import Q1Code.rarity.*;
 
-//Minions have a limited selection of armour types, rarities and modifiers
+//Bosses drop higher rarity armour on average than elites
 
-public class MinionDrop implements ArmourFactory {
+public class BossDrop implements ArmourFactory {
 
     @Override
     public Armour generateArmour() {
@@ -15,27 +15,31 @@ public class MinionDrop implements ArmourFactory {
         //Generate a random decimal between 0 and 1
         double random = Math.random();
         //Use decimals to finely control the rarity of the armour
-        if (random < 0.5) {
-            rarity = new Common();
-        } else if (random < 0.8) {
-            rarity = new Uncommon();
+        if (random < 0.25) {
+            rarity = new Mythic();
         } else {
-            rarity = new Rare();
+            rarity = new Legendary();
         }
 
         //Generate random slot number
-        int randomSlot = (int) (Math.random() * 3);
+        int slot = (int) (Math.random() * 4);
         //Pick armour based on slot
         Armour armour = null;
-        switch (randomSlot) {
+        switch (slot) {
             case 0:
                 armour = new Helm(rarity);
                 break;
             case 1:
-                armour = new Ring(rarity);
+                armour = new ChestPiece(rarity);
                 break;
             case 2:
                 armour = new Amulet(rarity);
+                break;
+            case 3:
+                armour = new Ring(rarity);
+                break;
+            case 4:
+                armour = new Shield(rarity);
                 break;
         }
 
@@ -45,21 +49,35 @@ public class MinionDrop implements ArmourFactory {
         } else if (rarity.getRarity() == 2) {
             armour = addModifier(armour);
             armour = addModifier(armour);
+        } else if (rarity.getRarity() == 3) {
+            armour = addModifier(armour);
+            armour = addModifier(armour);
+            armour = addModifier(armour);
+        } else if (rarity.getRarity() == 4) {
+            armour = addModifier(armour);
+            armour = addModifier(armour);
+            armour = addModifier(armour);
+            armour = addModifier(armour);
         }
 
         return armour;
     }
 
-    //Minions only drop with modifiers dex and intelligence
     @Override
     public Armour addModifier(Armour armour) {
         //Add a random modifier
-        int random = (int) (Math.random());
+        int random = (int) (Math.random() * 4);
         switch (random) {
             case 0:
-                return new Dexterity(armour);
+                return new Mana(armour);
             case 1:
+                return new Strength(armour);
+            case 2:
+                return new Dexterity(armour);
+            case 3:
                 return new Intelligence(armour);
+            case 4:
+                return new Vitality(armour);
         }
         return armour;
     }

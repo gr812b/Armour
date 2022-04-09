@@ -1,6 +1,6 @@
+package Q2Code;
 
-
-import observer.BaseSite;
+import Q2Code.observer.BaseSite;
 
 public class SiteTwo implements BaseSite {
 

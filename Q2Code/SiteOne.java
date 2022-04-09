@@ -1,4 +1,6 @@
-import observer.BaseSite;
+package Q2Code;
+
+import Q2Code.observer.BaseSite;
 
 public class SiteOne implements BaseSite {
 

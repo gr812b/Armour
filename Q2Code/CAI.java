@@ -1,7 +1,9 @@
+package Q2Code;
+
 import java.util.ArrayList;
 import java.util.Random;
 
-import observer.*;
+import Q2Code.observer.*;
 
 public class CAI implements Subject {
 
